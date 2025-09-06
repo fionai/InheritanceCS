@@ -17,12 +17,20 @@ namespace Academy
         {
             Speciality = speciality;
             Experience = experience;
-            Console.WriteLine($"TConstructor:\t{GetHashCode().ToString("X")}");
+            //Console.WriteLine($"TConstructor:\t{GetHashCode().ToString("X")}");
+        }
+        ~Teacher()
+        {
+            //Console.WriteLine($"TDestructor:\t{GetHashCode().ToString("X")}");
         }
         public override string ToString()
         {
-            return base.ToString()+$" {Speciality} {Experience}";
+            return base.ToString()+$"|{Speciality}|{Experience}";
         }
+        //public  string ToStringF()
+        //{
+        //    return base.ToStringF()+$"|{Speciality}|{Experience}";
+        //}
 
     }
 }

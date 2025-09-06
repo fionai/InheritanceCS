@@ -16,11 +16,19 @@ namespace Academy
             string subject):base (lastName, firstName, age, speciality, group, rating, attendance)
         {
             Subject = subject;
-            Console.WriteLine($"GConstructor {GetHashCode().ToString("X")}");
+            //Console.WriteLine($"GConstructor {GetHashCode().ToString("X")}");
+        }
+        ~Graduate()
+        {
+            //Console.WriteLine($"GDestructor:\t{GetHashCode().ToString("X")}");
         }
         public override string ToString()
         {
-            return base.ToString() + $" {Subject}";
+            return base.ToString() + $"|{Subject}";
         }
+        //public  string ToStringF()
+        //{
+        //    return base.ToStringF() + $"|{Subject}";
+        //}
     }
 }

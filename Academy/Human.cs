@@ -17,16 +17,19 @@ namespace Academy
             LastName = lastName;
             FirstName = firstName;
             Age = age;
-            Console.WriteLine($"HConstructor:\t{GetHashCode().ToString("X")}");
+            //Console.WriteLine($"HConstructor:\t{GetHashCode().ToString("X")}");
         }
         ~Human()
         {
-            Console.WriteLine($"HDestructor:\t{GetHashCode().ToString("X")}");
+            //Console.WriteLine($"HDestructor:\t{GetHashCode().ToString("X")}");
         }
         public override string ToString()
         {
-            return base.ToString() + $" {LastName} {FirstName} {Age}";
+            return base.ToString() + $" {LastName}|{FirstName}|{Age}";
         }
-
+        //public string ToStringF()
+        //{
+        //    return base.ToString() + $" {LastName}|{FirstName}|{Age}";
+        //}
     }
 }

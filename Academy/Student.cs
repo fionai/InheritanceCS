@@ -21,12 +21,20 @@ namespace Academy
             Group = qroup;
             Rating = rating;
             Attendance = attendance;
-            Console.WriteLine($"SConstructor:\t {GetHashCode().ToString("X")}");
+            //Console.WriteLine($"SConstructor:\t {GetHashCode().ToString("X")}");
+        }
+        ~Student()
+        {
+            //Console.WriteLine($"SDestructor:\t{GetHashCode().ToString("X")}");
         }
         public override string ToString()
         {
-            return base.ToString() + $" {Speciality} {Group} {Rating} {Attendance}";
+            return base.ToString() + $"|{Speciality}|{Group}|{Rating}|{Attendance}";
         }
+        //public  string ToStringF()
+        //{
+        //    return base.ToStringF() + $"|{Speciality}|{Group}|{Rating}|{Attendance}";
+        //}
     }
 }
 
