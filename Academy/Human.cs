@@ -25,7 +25,7 @@ namespace Academy
         }
         public override string ToString()
         {
-            return base.ToString() + $"{LastName} {FirstName} {Age}";
+            return base.ToString() + $" {LastName} {FirstName} {Age}";
         }
 
     }
