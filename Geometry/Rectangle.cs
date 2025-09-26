@@ -9,7 +9,7 @@ using System.Drawing;
 
 namespace Geometry
 {
-    internal class Rectangle:Shape
+    internal class Rectangle:Shape, IHaveDiagonal
     {
         double width;
         double height;
@@ -33,6 +33,10 @@ namespace Geometry
             Width = width;
             Height = height;
         }
+        public double GetDiagonal()
+        {
+            return Math.Sqrt( Width * Width + Height * Height );
+        }
         public override double GetArea()
         {
             return Width * Height;
@@ -46,11 +50,23 @@ namespace Geometry
             Pen pen = new Pen(Color, LineWidth);
             e.Graphics.DrawRectangle(pen, StartX, StartY, (float)Width, (float)Height);
         }
+        public void DrawDiagonal(PaintEventArgs e) 
+        {
+            Pen pen = new Pen(Color, 1);
+            e.Graphics.DrawLine
+                (
+                pen, 
+                StartX, StartY, 
+                (int)(StartX + Width), (int)(StartY + Height)
+                );
+        }
         public override void Info(PaintEventArgs e)
         {
             Console.WriteLine($"Ширина: {Width}");
             Console.WriteLine($"Высота: {Height}");
+            Console.WriteLine($"Диагональ: {GetDiagonal()}");
             base.Info(e);
+            DrawDiagonal(e);
         }
     }
 }

@@ -23,21 +23,28 @@ namespace Geometry
                 Console.WindowLeft, Console.WindowTop,
                 Console.WindowWidth, Console.WindowHeight
                 );
-            PaintEventArgs e = new PaintEventArgs( graphics, window_rect );
+            PaintEventArgs e = new PaintEventArgs(graphics, window_rect);
             e.Graphics.DrawLine(new Pen(Color.AliceBlue, 10), 100, 100, 500, 500);
 
             //Shape shape = new Shape(0, 0, 0, System.Drawing.Color.Aquamarine) ;
-            Rectangle rectangle = new Rectangle(150, 100, 110, 250, 2, Color.Aquamarine);
-            //rectangle.Info(e);
-            rectangle.Draw(e);
+            Rectangle rectangle = new Rectangle(150, 100, 100, 250, 2, Color.Aquamarine);
+            rectangle.Info(e);
+            //rectangle.Draw(e);
 
-            Square square = new Square(180, 100, 240, 3, Color.Red);
-            //square.Info(e);
-            square.Draw(e);
+            Square square = new Square(180, 300, 240, 3, Color.Red);
+            square.Info(e);
+            GetDiagonal(square);
+            //square.Draw(e);
         }
+        static void GetDiagonal(IHaveDiagonal d)
+        {
+            Console.WriteLine(d.GetDiagonal());
+        }
+
         [DllImport("kernel32.dll")]
         public static extern IntPtr GetConsoleWindow();
-       // [DllImport("kernel32.dll")]
-       //  public static extern IntPtr GetDC(IntPtr hwnd);
+        // [DllImport("kernel32.dll")]
+        //  public static extern IntPtr GetDC(IntPtr hwnd);
     }
 }
+
