@@ -27,18 +27,25 @@ namespace Geometry
            // e.Graphics.DrawLine(new Pen(Color.AliceBlue, 10), 100, 100, 500, 500);
 
             //Shape shape = new Shape(0, 0, 0, System.Drawing.Color.Aquamarine) ;
-            Rectangle rectangle = new Rectangle(150, 100, 50, 250, 2, Color.Aquamarine);
-            rectangle.Info(e);
-
-            Square square = new Square(150, 250, 240, 3, Color.Red);
-            square.Info(e);
-            GetDiagonal(square);
+            //Rectangle rectangle = new Rectangle(150, 100, 50, 250, 2, Color.Aquamarine);
+            //rectangle.Info(e);
+            //
+            //Square square = new Square(150, 250, 240, 3, Color.Red);
+            //square.Info(e);
+            //GetDiagonal(square);
 
             Circle circle = new Circle(75, 450, 250, 3, Color.YellowGreen);
             circle.Info(e);
 
             Triangle triangle = new Triangle(150, 100, 200, 650, 250, 3, Color.DeepPink);
             triangle.Info(e);
+
+            Triangle2S triangle2s = new Triangle2S(150, 200, 50, 250, 3, Color.AliceBlue);
+            triangle2s.Info(e);
+
+            Triangle3S triangle3S = new Triangle3S(200, 250, 250, 3, Color.DarkCyan);
+            triangle3S.Info(e);
+            
         }
         static void GetDiagonal(IHaveDiagonal d)
         {
