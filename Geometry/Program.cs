@@ -24,17 +24,21 @@ namespace Geometry
                 Console.WindowWidth, Console.WindowHeight
                 );
             PaintEventArgs e = new PaintEventArgs(graphics, window_rect);
-            e.Graphics.DrawLine(new Pen(Color.AliceBlue, 10), 100, 100, 500, 500);
+           // e.Graphics.DrawLine(new Pen(Color.AliceBlue, 10), 100, 100, 500, 500);
 
             //Shape shape = new Shape(0, 0, 0, System.Drawing.Color.Aquamarine) ;
-            Rectangle rectangle = new Rectangle(150, 100, 100, 250, 2, Color.Aquamarine);
+            Rectangle rectangle = new Rectangle(150, 100, 50, 250, 2, Color.Aquamarine);
             rectangle.Info(e);
-            //rectangle.Draw(e);
 
-            Square square = new Square(180, 300, 240, 3, Color.Red);
+            Square square = new Square(150, 250, 240, 3, Color.Red);
             square.Info(e);
             GetDiagonal(square);
-            //square.Draw(e);
+
+            Circle circle = new Circle(75, 450, 250, 3, Color.YellowGreen);
+            circle.Info(e);
+
+            Triangle triangle = new Triangle(150, 100, 200, 650, 250, 3, Color.DeepPink);
+            triangle.Info(e);
         }
         static void GetDiagonal(IHaveDiagonal d)
         {

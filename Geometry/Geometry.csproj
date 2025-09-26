@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Circle.cs" />
     <Compile Include="IHaveDiagonal.cs" />
     <Compile Include="Monitor.cs" />
     <Compile Include="Program.cs" />
@@ -52,6 +53,8 @@
     <Compile Include="Rectangle.cs" />
     <Compile Include="Shape.cs" />
     <Compile Include="Square.cs" />
+    <Compile Include="Triangle.cs" />
+    <Compile Include="Triangle2S.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

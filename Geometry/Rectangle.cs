@@ -62,9 +62,9 @@ namespace Geometry
         }
         public override void Info(PaintEventArgs e)
         {
-            Console.WriteLine($"Ширина: {Width}");
-            Console.WriteLine($"Высота: {Height}");
-            Console.WriteLine($"Диагональ: {GetDiagonal()}");
+            Console.Write($"Ширина: {Width} ");
+            Console.Write($"Высота: {Height} ");
+            Console.Write($"Диагональ: {GetDiagonal()}\n");
             base.Info(e);
             DrawDiagonal(e);
         }

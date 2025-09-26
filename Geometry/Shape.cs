@@ -69,8 +69,8 @@ namespace Geometry
         public abstract void Draw(PaintEventArgs e);
         public virtual void Info(PaintEventArgs e)
         {
-            Console.WriteLine($"Площадь фигуры: {GetArea()}");
-            Console.WriteLine($"Периметр фигуры: {GetPerimeter()}");
+            Console.Write($"Площадь фигуры: {GetArea()} ");
+            Console.Write($"Периметр фигуры: {GetPerimeter()}\n");
             Draw(e);
         }
     }
